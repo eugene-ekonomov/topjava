@@ -53,7 +53,6 @@ public class UserMealsUtil {
                 lumwe.add(mealwe);
             }
         }
-        // TODO return filtered list with correctly exceeded field
         return lumwe;
     }
 }

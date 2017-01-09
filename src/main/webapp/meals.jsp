@@ -9,7 +9,7 @@
 <body>
 <h2><a href="index.html">Home</a></h2>
 <h2>Meal list</h2>
-<table>
+<table border="1">
     <tr>
         <th>Дата</th>
         <th>Приём пищи</th>
@@ -17,7 +17,12 @@
         <th>Превышение</th>
     </tr>
     <c:forEach var="meal" items="${meals}">
-        <tr>
+        <c:if test="${meal.exceed}">
+            <tr style="background-color: #f00">
+        </c:if>
+        <c:if test="${!meal.exceed}">
+            <tr style="background-color: #0f0">
+        </c:if>
             <c:set var="cleanedDateTime" value="${fn:replace(meal.dateTime, 'T', ' ')}" />
             <fmt:parseDate value="${ cleanedDateTime }" pattern="yyyy-MM-dd HH:mm" var="parsedDateTime" type="both" />
             <td><fmt:formatDate pattern="yyyy-MM-dd" value="${parsedDateTime}" /></td>

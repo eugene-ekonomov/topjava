@@ -1,13 +1,16 @@
 package ru.javawebinar.topjava.repository;
 
+import org.springframework.stereotype.Repository;
 import ru.javawebinar.topjava.model.User;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
  * User: gkislin
  * Date: 22.08.2014
  */
+@Repository
 public interface UserRepository {
     User save(User user);
 

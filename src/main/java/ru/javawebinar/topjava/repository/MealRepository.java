@@ -4,18 +4,19 @@ import org.springframework.stereotype.Repository;
 import ru.javawebinar.topjava.model.Meal;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * GKislin
  * 06.03.2015.
  */
-@Repository
+
 public interface MealRepository {
     Meal save(int userId, Meal Meal);
 
-    void delete(int userId, int id);
+    boolean delete(int userId, int id);
 
     Meal get(int userId, int id);
 
-    Collection<Meal> getAll(int userId);
+    List<Meal> getAll(int userId);
 }

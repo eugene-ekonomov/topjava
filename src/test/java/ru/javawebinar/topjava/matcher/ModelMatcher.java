@@ -62,6 +62,10 @@ public class ModelMatcher<T> {
         Assert.assertEquals(wrap(expected), wrap(actual));
     }
 
+    public void assertListEquals(List<T> expected, List<T> actual) {
+        Assert.assertEquals(wrap(expected), wrap(actual));
+    }
+
     public Wrapper wrap(T entity) {
         return new Wrapper(entity);
     }

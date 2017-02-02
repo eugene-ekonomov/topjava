@@ -18,6 +18,11 @@ public class MealTestData {
     public static ArrayList<Meal> meals = new ArrayList<>();
 
     static{
+        setUp();
+    }
+
+    public static void setUp(){
+        meals.clear();
         meals.add(new Meal(100007, LocalDateTime.of(2015, Month.MAY, 31, 20, 0), "Ужин", 510));
         meals.add(new Meal(100006, LocalDateTime.of(2015, Month.MAY, 31, 13, 0), "Обед", 500));
         meals.add(new Meal(100005, LocalDateTime.of(2015, Month.MAY, 31, 10, 0), "Завтрак", 1000));

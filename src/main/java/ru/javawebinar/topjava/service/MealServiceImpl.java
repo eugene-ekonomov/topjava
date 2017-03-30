@@ -6,6 +6,7 @@ import org.springframework.util.Assert;
 import ru.javawebinar.topjava.model.Meal;
 import ru.javawebinar.topjava.repository.MealRepository;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import java.time.LocalDateTime;
 import java.util.Collection;
 
@@ -18,6 +19,7 @@ import static ru.javawebinar.topjava.util.ValidationUtil.checkNotFoundWithId;
 @Service
 public class MealServiceImpl implements MealService {
 
+    @Qualifier("jpaMealRepositoryImpl")
     @Autowired
     private MealRepository repository;
 

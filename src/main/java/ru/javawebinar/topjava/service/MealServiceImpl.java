@@ -19,7 +19,7 @@ import static ru.javawebinar.topjava.util.ValidationUtil.checkNotFoundWithId;
 @Service
 public class MealServiceImpl implements MealService {
 
-    @Qualifier("jpaMealRepositoryImpl")
+    @Qualifier("dataJpaMealRepositoryImpl")
     @Autowired
     private MealRepository repository;
 

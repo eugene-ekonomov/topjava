@@ -22,7 +22,7 @@ import static ru.javawebinar.topjava.util.ValidationUtil.checkNotFoundWithId;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Qualifier("jpaUserRepositoryImpl")
+    @Qualifier("dataJpaUserRepositoryImpl")
     @Autowired
     private UserRepository repository;
 

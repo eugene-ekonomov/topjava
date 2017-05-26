@@ -8,8 +8,15 @@ public class Profiles {
     public static final String
             POSTGRES = "postgres",
             HSQLDB = "hsqldb",
+
             JDBC = "jdbc",
-            JPA = "jpa";
+            JPA = "jpa",
+            DATAJPA = "datajpa";
 
     public static final String ACTIVE_DB = POSTGRES;
+    public static final String ACTIVE_ORM = JDBC;
+
+    public static String getProfiles(){
+        return ACTIVE_DB + ", " + ACTIVE_ORM;
+    }
 }
